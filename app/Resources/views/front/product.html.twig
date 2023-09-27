@@ -1,0 +1,36 @@
+{# Plantilla de la app#}
+{% extends 'base.html.twig' %}
+{# Titulo #}
+{% block title %}
+Products
+{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{# Contenido #}
+
+
+{% block content %}
+<div class="conatiner">
+    
+    <h1 class="mt-4 mb-3">Products
+        <small>ASEGCOR</small>
+    </h1>
+</div>
+
+<section class="py-5 border-bottom" id="features">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                {% for product in products %}
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h2 class="h4 fw-bolder">{{product.name}}</h2>
+                        <p> Esto es un Seguro </p>
+                        <img class="img-fluid rounded mb-4" src="{{ asset('img/imagenes/colision.png')}}">                        
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </section>
+{% endblock %}
